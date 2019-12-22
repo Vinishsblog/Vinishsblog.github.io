@@ -38,6 +38,15 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
+```ruby
+ declare
+	    a number;
+	    begin
+	       select * from abc;
+
+	    end;
+```
+
 #### [](#header-4)Header 4
 
 *   This is an unordered list following a header.
