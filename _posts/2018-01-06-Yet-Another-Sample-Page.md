@@ -38,7 +38,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-```ruby
+```js
  declare
 	    a number;
 	    begin
