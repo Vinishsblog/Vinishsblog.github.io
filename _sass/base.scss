@@ -25,7 +25,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -89,7 +89,7 @@ header h2 {
 */
 
 #main_content {
-  width: 75%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 section img {
@@ -160,7 +160,6 @@ pre {
   text-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
-  width: 100%;
 }
 
 code.highlighter-rouge {
