@@ -1,8 +1,9 @@
 ---
-title: Yet Another Sample Page
+title: devVinish.com is coming soon.
 published: true
 featured: true
 ---
+The website devvinish.com is under construction and coming soon.
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
