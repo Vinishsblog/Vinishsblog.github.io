@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Oracle Apex - Compare dates using JavaScript</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Oracle Apex - Compare dates using JavaScript | devVinish.com</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Oracle Apex - Compare dates using JavaScript" />
+<meta name="author" content="VinishKapoor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript." />
+<meta property="og:description" content="In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript." />
+<link rel="canonical" href="http://localhost:4000/oracle-apex-compare-dates-using-javascript" />
+<meta property="og:url" content="http://localhost:4000/oracle-apex-compare-dates-using-javascript" />
+<meta property="og:site_name" content="devVinish.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-10T00:00:00+05:30" />
+<script type="application/ld+json">
+{"dateModified":"2020-03-10T00:00:00+05:30","url":"http://localhost:4000/oracle-apex-compare-dates-using-javascript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/oracle-apex-compare-dates-using-javascript"},"author":{"@type":"Person","name":"VinishKapoor"},"description":"In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript.","headline":"Oracle Apex - Compare dates using JavaScript","@type":"BlogPosting","datePublished":"2020-03-10T00:00:00+05:30","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>devVinish.com</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h1>Oracle Apex - Compare dates using JavaScript</h1>
+  <time datetime="2020-03-10T00:00:00+05:30" class="by-line">10 Mar 2020</time>
+  <p>In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript.</p>
+
+<p>There was a requirement to highlight the date with red if the billing date value is less than the current date.</p>
+
+<h2 id="create-an-item-to-store-current-date">Create an Item to Store Current Date</h2>
+
+<p>So first, I have created a hidden item P2_CURRDATE to store the current date as default on page initialization. Then added the following PL/SQL expression for the Default setting:</p>
+
+<pre><code class="language-plsql">trunc(sysdate)
+</code></pre>
+
+<h2 id="create-a-dynamic-action">Create a Dynamic Action</h2>
+
+<p>Then I have created a dynamic action on the date field to which I need to highlight with red.</p>
+
+<p>The dynamic action event type is Change and add the following client side condition as JavaScript expression:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">$v</span><span class="p">(</span><span class="dl">"</span><span class="s2">P2_BILLDATE</span><span class="dl">"</span><span class="p">)).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">&lt;</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">$v</span><span class="p">(</span><span class="dl">"</span><span class="s2">P2_CURRDATE</span><span class="dl">"</span><span class="p">)).</span><span class="nx">getTime</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="then-added-a-true-action-as-following">Then added a true action as following:</h3>
+
+<p>Action: <strong>Set Style</strong>
+Style Name: <strong>color</strong>
+Value: <strong>red</strong></p>
+
+<h3 id="also-created-a-false-action">Also created a false action:</h3>
+
+<p>Action: <strong>Set Style</strong>
+Style Name: <strong>color</strong>
+Value: <strong>black</strong></p>
+
+<p>Now save the changes and run the page to test.</p>
+
+</article>
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Vinish</b>
+    </span>
+    
+    <span>© 2020</span>
+  </a>
+</footer>
+
+  
+    <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-127945073-2', 'auto');
+  ga('send', 'pageview');
+</script>
+  
+</body>
+
+</html>

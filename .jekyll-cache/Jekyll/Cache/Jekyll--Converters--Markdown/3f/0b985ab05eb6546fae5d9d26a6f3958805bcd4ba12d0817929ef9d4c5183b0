@@ -1,0 +1,34 @@
+I"ã<p>In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript.</p>
+
+<p>There was a requirement to highlight the date with red if the billing date value is less than the current date.</p>
+
+<h2 id="create-an-item-to-store-current-date">Create an Item to Store Current Date</h2>
+
+<p>So first, I have created a hidden item P2_CURRDATE to store the current date as default on page initialization. Then added the following PL/SQL expression for the Default setting:</p>
+
+<pre><code class="language-plsql">trunc(sysdate)
+</code></pre>
+
+<h2 id="create-a-dynamic-action">Create a Dynamic Action</h2>
+
+<p>Then I have created a dynamic action on the date field to which I need to highlight with red.</p>
+
+<p>The dynamic action event type is Change and add the following client side condition as JavaScript expression:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">$v</span><span class="p">(</span><span class="dl">"</span><span class="s2">P2_BILLDATE</span><span class="dl">"</span><span class="p">)).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">&lt;</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">$v</span><span class="p">(</span><span class="dl">"</span><span class="s2">P2_CURRDATE</span><span class="dl">"</span><span class="p">)).</span><span class="nx">getTime</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="then-added-a-true-action-as-following">Then added a true action as following:</h3>
+
+<p>Action: <strong>Set Style</strong>
+Style Name: <strong>color</strong>
+Value: <strong>red</strong></p>
+
+<h3 id="also-created-a-false-action">Also created a false action:</h3>
+
+<p>Action: <strong>Set Style</strong>
+Style Name: <strong>color</strong>
+Value: <strong>black</strong></p>
+
+<p>Now save the changes and run the page to test.</p>
+:ET

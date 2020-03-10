@@ -1,0 +1,48 @@
+I"P
+<p>To list files and directories on the system, use the ls command. This tutorial describes the ls command and options available to format the information it can display.</p>
+
+<h2 id="using-ls-command">Using ls Command</h2>
+<p>To just display the content of a folder without any format, use the ls command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span>
+</code></pre></div></div>
+
+<h3 id="to-distinguish-the-files-from-folders-use-the--f-parameter">To distinguish the files from folders use the -F parameter</h3>
+<p>The -F parameter flags the folders with a forward slash.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-F</span>
+</code></pre></div></div>
+
+<h3 id="display-hidden-files-with-normal-files">Display hidden files with normal Files</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-a</span>
+</code></pre></div></div>
+
+<h3 id="list-files-contained-in-sub-folders">List files contained in sub-folders</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-F</span> <span class="nt">-R</span>
+</code></pre></div></div>
+
+<h3 id="long-list-format">Long list format</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span>
+</code></pre></div></div>
+
+<h3 id="filtering-files-list">Filtering files list</h3>
+<p>Just use the file name after any parameter or ls command to filter the list.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> my_script
+</code></pre></div></div>
+
+<h3 id="filter-using-question--mark">Filter using question (?) mark</h3>
+
+<p>The question mark can be used to replace exactly one character anywhere in the filter string. The following is an example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> my_scri?pt
+</code></pre></div></div>
+
+<h3 id="use-asterisk-to-match-0-or-more-characters">Use Asterisk to match 0 or more characters</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> my<span class="k">*</span>
+</code></pre></div></div>
+:ET
