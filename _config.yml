@@ -28,5 +28,6 @@ plugins:
   - jekyll-sitemap
 
 # Custom variables
+google_analytics: UA-127945073-2
 owner : "Vinish"
 year : "2019"
