@@ -1,5 +1,5 @@
 ---
-title: Oracle Apex: Compare dates using JavaScript
+title: Oracle Apex - Compare dates using JavaScript
 published: true
 ---
 
