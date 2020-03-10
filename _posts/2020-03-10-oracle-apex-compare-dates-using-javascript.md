@@ -1,8 +1,10 @@
 ---
-title: devVinish.com is coming soon.
+title: Oracle Apex: Compare dates using JavaScript
 published: true
-featured: true
 ---
+
+In this tutorial, you will learn how to compare dates in Oracle Apex using the JavaScript.
+
 The website devvinish.com is under construction and coming soon.
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
